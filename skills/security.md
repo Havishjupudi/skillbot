@@ -23,7 +23,7 @@ The following patterns are automatically blocked by safety guards:
 3. **Prefer** relative paths over absolute paths
 4. **Confirm** with the user before destructive operations (deleting files, overwriting data)
 5. **Use** `--dry-run` flags when available to preview changes
-6. When `SKILLBOTS_RESTRICT_WORKSPACE=1` is set, all commands are limited to the project directory
+6. When `SKILLBOT_RESTRICT_WORKSPACE=1` is set, all commands are limited to the project directory
 
 ## Handling sensitive data
 

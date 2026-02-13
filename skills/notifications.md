@@ -10,7 +10,7 @@ Send native macOS notifications using AppleScript.
 ## Basic notification
 
 ```bash
-osascript -e 'display notification "Task completed!" with title "skillBots"'
+osascript -e 'display notification "Task completed!" with title "skillbot"'
 ```
 
 ## With subtitle

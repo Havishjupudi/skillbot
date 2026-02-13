@@ -73,7 +73,7 @@ export function createDiscordChannel(opts: DiscordOpts = {}): Channel {
               d: {
                 token,
                 intents: 33281, // GUILDS | GUILD_MESSAGES | MESSAGE_CONTENT | DIRECT_MESSAGES
-                properties: { os: "linux", browser: "skillbots", device: "skillbots" },
+                properties: { os: "linux", browser: "skillbot", device: "skillbot" },
               },
             }));
           }

@@ -2,7 +2,7 @@
  * Integration test runner — per-skill smoke tests + complex scenario tests.
  * Uses mock tools (no real command execution).
  *
- * Usage: SKILLBOTS_MOCK=1 SKILLBOTS_DEBUG=1 npx tsx core/test-skills.ts
+ * Usage: SKILLBOT_MOCK=1 SKILLBOT_DEBUG=1 npx tsx core/test-skills.ts
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -245,7 +245,7 @@ async function testOnDemandSkillLoading() {
 // ══════════════════════════════════════════════════════════════════
 
 async function main() {
-  console.log(`\nskillBots Integration Tests — ${skills.length} skills, provider: ${config.name}, model: ${config.model}\n`);
+  console.log(`\nskillbot Integration Tests — ${skills.length} skills, provider: ${config.name}, model: ${config.model}\n`);
   console.log("=".repeat(70));
 
   await runSkillTests();

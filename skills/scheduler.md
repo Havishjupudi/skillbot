@@ -61,17 +61,17 @@ The bot reads this file every 30 minutes and executes any instructions found. Le
 Create a launch agent for reliable scheduling that survives reboots:
 
 ```bash
-cat > ~/Library/LaunchAgents/com.skillbots.reminder.plist << 'EOF'
+cat > ~/Library/LaunchAgents/com.skillbot.reminder.plist << 'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>Label</key><string>com.skillbots.reminder</string>
+  <key>Label</key><string>com.skillbot.reminder</string>
   <key>ProgramArguments</key>
   <array>
     <string>/usr/bin/osascript</string>
     <string>-e</string>
-    <string>display notification "Scheduled task" with title "skillBots"</string>
+    <string>display notification "Scheduled task" with title "skillbot"</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
@@ -81,7 +81,7 @@ cat > ~/Library/LaunchAgents/com.skillbots.reminder.plist << 'EOF'
 </dict>
 </plist>
 EOF
-launchctl load ~/Library/LaunchAgents/com.skillbots.reminder.plist
+launchctl load ~/Library/LaunchAgents/com.skillbot.reminder.plist
 ```
 
 ## Tips
@@ -89,5 +89,5 @@ launchctl load ~/Library/LaunchAgents/com.skillbots.reminder.plist
 - `at` requires: `sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.atrun.plist`
 - Crontab uses server timezone; check with `date`
 - Use full paths in cron/launchd (e.g., `/usr/bin/osascript`, `/usr/local/bin/node`)
-- List launch agents: `launchctl list | grep skillbots`
+- List launch agents: `launchctl list | grep skillbot`
 - For recurring **bot-level** checks, prefer `HEARTBEAT.md` over crontab

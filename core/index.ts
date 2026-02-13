@@ -23,7 +23,7 @@ if (fs.existsSync(envPath)) {
 }
 
 const DEFAULT_KEY = "cli-default";
-const isMock = !!process.env.SKILLBOTS_MOCK;
+const isMock = !!process.env.SKILLBOT_MOCK;
 
 async function main() {
   loadPersistedSessions();
@@ -35,7 +35,7 @@ async function main() {
   if (isMock) console.log("MOCK MODE — bash commands are simulated.\n");
 
   // Channel
-  const ch = process.env.SKILLBOTS_CHANNEL;
+  const ch = process.env.SKILLBOT_CHANNEL;
   const channel = ch === "telegram" ? createTelegramChannel() : ch === "imessage" ? createIMessageChannel()
     : ch === "discord" ? createDiscordChannel() : ch === "slack" ? createSlackChannel() : createCLIChannel();
 
@@ -46,7 +46,7 @@ async function main() {
   const tools: ToolDef[] = [...bashTools, spawnTool];
 
   // Heartbeat
-  const hbInterval = Number(process.env.SKILLBOTS_HEARTBEAT_INTERVAL) || 30 * 60 * 1000;
+  const hbInterval = Number(process.env.SKILLBOT_HEARTBEAT_INTERVAL) || 30 * 60 * 1000;
   if (!isMock && hbInterval > 0) {
     setInterval(() => {
       const file = path.join(projectRoot, "HEARTBEAT.md");

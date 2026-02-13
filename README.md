@@ -1,8 +1,8 @@
-# skillBots
+# skillbot
 
 **Skill is all you need.**
 
-A personal AI assistant where capabilities live in Markdown files, not code. Inspired by [OpenClaw](https://github.com/nicepkg/openclaw) and [nanobot](https://github.com/AgenTuring/nanobot), skillBots pushes the "skill-as-code" philosophy to its logical extreme: **815 lines of core TypeScript** replaces what took 300,000+ lines in OpenClaw and 8,500+ in nanobot — with the same features.
+A personal AI assistant where capabilities live in Markdown files, not code. Inspired by [OpenClaw](https://github.com/nicepkg/openclaw) and [nanobot](https://github.com/AgenTuring/nanobot), skillbot pushes the "skill-as-code" philosophy to its logical extreme: **815 lines of core TypeScript** replaces what took 300,000+ lines in OpenClaw and 8,500+ in nanobot — with the same features.
 
 > Every new capability is a `.md` file. No code changes, no redeployment, no dependencies.
 
@@ -10,9 +10,9 @@ A personal AI assistant where capabilities live in Markdown files, not code. Ins
 Core:  815 lines  ·  33 skills  ·  9 providers  ·  5 channels  ·  1 dependency
 ```
 
-## Why skillBots?
+## Why skillbot?
 
-| | OpenClaw | nanobot | **skillBots** |
+| | OpenClaw | nanobot | **skillbot** |
 |---|---|---|---|
 | Core code | ~300,000 lines (TS) | ~8,500 lines (Python) | **815 lines (TS)** |
 | Skills | 52 (complex plugin system) | 0 (hardcoded) | **33 (pure Markdown)** |
@@ -28,7 +28,7 @@ The insight is simple: **LLMs can read instructions**. Instead of writing code t
 
 ```
 Traditional:  User → Code → API → Parse → Format → User     (hundreds of lines per feature)
-skillBots:    User → LLM → bash → CLI tool → LLM → User     (one .md file per feature)
+skillbot:    User → LLM → bash → CLI tool → LLM → User     (one .md file per feature)
 ```
 
 This works because:
@@ -39,14 +39,14 @@ This works because:
 ## Quick Start
 
 ```bash
-git clone <repo-url> skillBots && cd skillBots
+git clone <repo-url> skillbot && cd skillbot
 npm install
 ```
 
 Create `.env`:
 
 ```env
-SKILLBOTS_PROVIDER=openai
+SKILLBOT_PROVIDER=openai
 OPENAI_API_KEY=sk-your-key-here
 ```
 
@@ -87,7 +87,7 @@ The entire core is 9 files. Every feature — from weather queries to market ana
 
 ### 1. Skill-Driven Memory (vs hardcoded memory systems)
 
-Most agents hardcode memory into the runtime. skillBots uses a **dual-layer Markdown memory** that the LLM manages itself:
+Most agents hardcode memory into the runtime. skillbot uses a **dual-layer Markdown memory** that the LLM manages itself:
 
 - `MEMORY.md` — long-term facts (user preferences, important context)
 - `memory/YYYY-MM-DD.md` — daily interaction logs
@@ -118,12 +118,12 @@ Both are injected at the top of every system prompt. Change the bot's personalit
 
 ### 4. Two Tools, Infinite Capabilities
 
-Instead of building custom tool implementations for each integration, skillBots has exactly two tools:
+Instead of building custom tool implementations for each integration, skillbot has exactly two tools:
 
 - **`bash`** — execute any shell command (with safety guards)
 - **`spawn`** — run a background subagent for complex tasks
 
-Everything else (`curl`, `gh`, `docker`, `crontab`, `osascript`, ...) is accessed through bash, guided by skills. This means skillBots can do anything your shell can do — which is effectively everything.
+Everything else (`curl`, `gh`, `docker`, `crontab`, `osascript`, ...) is accessed through bash, guided by skills. This means skillbot can do anything your shell can do — which is effectively everything.
 
 ### 5. Comprehensive Mock Testing
 
@@ -217,13 +217,13 @@ All config via `.env`:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `SKILLBOTS_PROVIDER` | `azure` | LLM provider name |
-| `SKILLBOTS_CHANNEL` | CLI | `telegram`, `discord`, `slack`, `imessage` |
-| `SKILLBOTS_MOCK` | — | `1` for mock mode |
-| `SKILLBOTS_DEBUG` | — | `1` for debug logging |
-| `SKILLBOTS_RESTRICT_WORKSPACE` | — | `1` to sandbox commands to project dir |
-| `SKILLBOTS_HEARTBEAT_INTERVAL` | `1800000` | Heartbeat interval in ms (0 to disable) |
-| `SKILLBOTS_CONTEXT_WINDOW` | `128000` | Context window size for auto-compaction |
+| `SKILLBOT_PROVIDER` | `azure` | LLM provider name |
+| `SKILLBOT_CHANNEL` | CLI | `telegram`, `discord`, `slack`, `imessage` |
+| `SKILLBOT_MOCK` | — | `1` for mock mode |
+| `SKILLBOT_DEBUG` | — | `1` for debug logging |
+| `SKILLBOT_RESTRICT_WORKSPACE` | — | `1` to sandbox commands to project dir |
+| `SKILLBOT_HEARTBEAT_INTERVAL` | `1800000` | Heartbeat interval in ms (0 to disable) |
+| `SKILLBOT_CONTEXT_WINDOW` | `128000` | Context window size for auto-compaction |
 
 ## Testing
 
@@ -241,7 +241,7 @@ npm run mock
 ## Project Structure
 
 ```
-skillBots/
+skillbot/
 ├── core/               # Core agent (815 lines in 9 files)
 │   ├── index.ts        #   Entry point, heartbeat, wiring
 │   ├── llm.ts          #   LLM client with reflection
@@ -275,7 +275,7 @@ skillBots/
 ```bash
 vllm serve meta-llama/Llama-3.1-8B-Instruct --port 8000
 
-echo 'SKILLBOTS_PROVIDER=local' >> .env
+echo 'SKILLBOT_PROVIDER=local' >> .env
 echo 'VLLM_BASE_URL=http://localhost:8000/v1' >> .env
 
 npm start
@@ -283,7 +283,7 @@ npm start
 
 ## Comparison with OpenClaw and nanobot
 
-| Dimension | OpenClaw | nanobot | skillBots |
+| Dimension | OpenClaw | nanobot | skillbot |
 |-----------|----------|---------|-----------|
 | Language | TypeScript | Python | TypeScript |
 | Core code | ~300,000 lines | ~8,500 lines | **815 lines** |
@@ -296,7 +296,7 @@ npm start
 | Mock testing | Partial | Partial | **Full (all skills)** |
 | Add a feature | Write TS plugin | Write Python | **Write .md file** |
 
-skillBots proves that with the right abstraction — Markdown skills + a minimal LLM loop — you can match the functionality of projects 100-300x larger.
+skillbot proves that with the right abstraction — Markdown skills + a minimal LLM loop — you can match the functionality of projects 100-300x larger.
 
 ---
 

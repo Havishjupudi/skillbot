@@ -1,4 +1,4 @@
-let _debug = !!process.env.SKILLBOTS_DEBUG;
+let _debug = !!process.env.SKILLBOT_DEBUG;
 
 export function isDebug(): boolean { return _debug; }
 export function toggleDebug(): boolean { _debug = !_debug; return _debug; }

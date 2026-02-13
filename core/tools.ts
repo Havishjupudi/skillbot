@@ -11,7 +11,7 @@ const DENY_PATTERNS: RegExp[] = [
   /\b(format|mkfs|diskpart)\b/i, /\bdd\s+if=/, />\s*\/dev\/sd/,
   /\b(shutdown|reboot|poweroff)\b/, /:\(\)\s*\{.*\};\s*:/, /\bchmod\s+-R\s+777\s+\//,
 ];
-const restrictToWorkspace = !!process.env.SKILLBOTS_RESTRICT_WORKSPACE;
+const restrictToWorkspace = !!process.env.SKILLBOT_RESTRICT_WORKSPACE;
 
 export function guardCommand(command: string, workdir: string): string | null {
   for (const p of DENY_PATTERNS) {

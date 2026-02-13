@@ -5,7 +5,7 @@ description: Create new skills or modify existing ones during conversation. Use 
 
 # Skill Creator
 
-Create or modify skillBots skills — self-extending the bot's capabilities.
+Create or modify skillbot skills — self-extending the bot's capabilities.
 
 ## Skill anatomy
 

@@ -7,7 +7,7 @@ const sessions = new Map<string, Session>();
 let counter = 0;
 
 // ── Persistence ──
-const SESSIONS_DIR = path.resolve(process.env.SKILLBOTS_SESSIONS_DIR || ".sessions");
+const SESSIONS_DIR = path.resolve(process.env.SKILLBOT_SESSIONS_DIR || ".sessions");
 
 function sessionFilePath(key: string): string {
   return path.join(SESSIONS_DIR, `${key.replace(/[^a-zA-Z0-9_-]/g, "_")}.jsonl`);
@@ -81,8 +81,8 @@ export function estimateTokens(messages: Message[]): number {
   }, 0) / 4;
 }
 
-const CONTEXT_WINDOW = Number(process.env.SKILLBOTS_CONTEXT_WINDOW) || 128000;
-const COMPACT_THRESHOLD = Number(process.env.SKILLBOTS_COMPACT_THRESHOLD) || 0.8;
+const CONTEXT_WINDOW = Number(process.env.SKILLBOT_CONTEXT_WINDOW) || 128000;
+const COMPACT_THRESHOLD = Number(process.env.SKILLBOT_COMPACT_THRESHOLD) || 0.8;
 const KEEP_RECENT = 6;
 
 /** Check if session needs compaction. */

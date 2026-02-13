@@ -251,7 +251,7 @@ async function testMockBashCoverage() {
 // ══════════════════════════════════════════════════════════════════
 
 async function main() {
-  console.log("\nskillBots Unit Tests (no LLM required)\n" + "=".repeat(50));
+  console.log("\nskillbot Unit Tests (no LLM required)\n" + "=".repeat(50));
 
   testFrontmatterParsing();
   testSkillLoading();

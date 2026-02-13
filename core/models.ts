@@ -96,7 +96,7 @@ function buildConfig(spec: ProviderSpec, modelOverride?: string): ModelConfig {
 
 /** Get model config by provider name, or auto-detect from model string. */
 export function getModelConfig(provider?: string): ModelConfig {
-  const key = provider || process.env.SKILLBOTS_PROVIDER || "azure";
+  const key = provider || process.env.SKILLBOT_PROVIDER || "azure";
 
   // Direct match by name
   const directSpec = specs.find((s) => s.name === key);

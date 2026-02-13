@@ -166,7 +166,7 @@ const mocks: [RegExp, string | ((cmd: string) => string)][] = [
   [/crontab -l/, "0 9 * * * /usr/bin/osascript -e 'display notification \"Good morning!\" with title \"Bot\"'\n30 18 * * 1-5 /usr/local/bin/node /Users/user/scripts/backup.js"],
   [/crontab -/, "(no output)"],
   [/at now|echo.*\| at/, "job 42 at Thu Feb 13 15:30:00 2026"],
-  [/launchctl (load|unload|list)/, "com.skillbots.reminder\trunning"],
+  [/launchctl (load|unload|list)/, "com.skillbot.reminder\trunning"],
   [/cat > ~\/Library\/LaunchAgents/, "(no output)"],
 
   // ── google-workspace ──

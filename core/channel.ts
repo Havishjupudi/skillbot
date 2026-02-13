@@ -17,7 +17,7 @@ export function createCLIChannel(): Channel {
   return {
     start(onMessage) {
       rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-      console.log("\n🤖 skillBots ready. Type a message (Ctrl+C to exit).\n");
+      console.log("\n🤖 skillbot ready. Type a message (Ctrl+C to exit).\n");
       console.log("   Commands: /reset /debug /quit\n");
 
       const prompt = () => {
