@@ -1,10 +1,11 @@
 <div align="center">
+  <img src="static/skillbot_icon.jpg" alt="skillbot" width="280">
 
-# skillbot
+  <h1>skillbot</h1>
 
-**Skill is all you need.**
+  <p><strong>Skill is all you need.</strong></p>
 
-A personal AI assistant where every capability is a Markdown file — not code.
+  <p>A personal AI assistant where every capability is a Markdown file — not code.</p>
 
 ```
 815 lines of core  ·  33 skills  ·  9 providers  ·  5 channels  ·  1 dependency
@@ -70,28 +71,11 @@ That's it. You have an AI assistant with 33 skills, persistent memory, backgroun
 
 ## 🏗️ Architecture
 
-```
-┌─────────────────────────────────────────────┐
-│  Channels: CLI · Telegram · Discord         │
-│            Slack · iMessage                 │
-├─────────────────────────────────────────────┤
-│           Core (815 lines total)            │
-│                                             │
-│   index.ts ─── llm.ts ─── tools.ts         │
-│      │          │            │              │
-│   session.ts  skills.ts   models.ts         │
-│      │                                      │
-│   channel.ts  types.ts   debug.ts           │
-├─────────────────────────────────────────────┤
-│        33 Skills (pure Markdown)            │
-│   weather · github · memory · coding-agent  │
-│   market-data · scheduler · subagent · ...  │
-├─────────────────────────────────────────────┤
-│        2 Tools: bash · spawn                │
-└─────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="static/skillbot_architecture.png" alt="skillbot architecture" width="800">
+</p>
 
-The entire core is **9 files**. Every feature — from weather queries to market analysis to smart home control — is a Markdown skill that teaches the LLM what commands to run.
+The entire core is **9 files, 815 lines**. Every feature — from weather queries to market analysis to smart home control — is a Markdown skill that teaches the LLM what commands to run.
 
 ---
 
@@ -163,6 +147,10 @@ The memory skill (`always: true`) is injected into every prompt, so the LLM proa
 
 <details>
 <summary><b>2. On-Demand Skill Loading</b> — small prompts, full capability</summary>
+
+<p align="center">
+  <img src="static/skillbot_skill_loading.jpg" alt="On-Demand Skill Loading" width="800">
+</p>
 
 Only `always: true` skills (memory, context-manager, persona, security) are fully injected into the system prompt. All other skills show only their name and one-line description in a catalog. When the LLM needs a skill, it reads the file:
 
